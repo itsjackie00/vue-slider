@@ -31,6 +31,9 @@ createApp({
         },
         startTimer() {
             this.intervalId = setInterval(this.nextSlide, 3000);
+        },
+        goToSlide(index) {
+            this.activeIndexSlide = index;
         }
 
     },
