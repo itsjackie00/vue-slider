@@ -1,26 +1,26 @@
-import {slides} from './data.js';
+import { slides } from './data.js';
 
-const {createApp} = Vue;
+const { createApp } = Vue;
 
 createApp({
-    data () {
+    data() {
         return {
             slides: slides,
-            activeIndexSlide: 0, 
+            activeIndexSlide: 0,
             counter: 0,
             intervalId: null,
         }
     },
     methods: {
         nextSlide() {
-            if(this.activeIndexSlide < this.slides.length - 1) {
+            if (this.activeIndexSlide < this.slides.length - 1) {
                 this.activeIndexSlide++;
             } else {
                 this.activeIndexSlide = 0;
             }
         },
-        prevSlide(){
-            if(this.activeIndexSlide > 0) {
+        prevSlide() {
+            if (this.activeIndexSlide > 0) {
                 this.activeIndexSlide--;
             } else {
                 this.activeIndexSlide = this.slides.length - 1;
